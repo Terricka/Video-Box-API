@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;
 
 // Define collection and schema for Songs
 let Song = new Schema({
-  songTitle: {
+  _songTitle: {
     type: String
   },
-  artistName: {
+  _artistName: {
     type: String
   },
-  videoLink: {
+  _videoLink: {
     type: String
   }
 },{

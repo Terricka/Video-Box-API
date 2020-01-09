@@ -45,9 +45,9 @@ songRoutes.route('/update/:id').post(function (req, res) {
     if (!song)
       return next(new Error('Could not load Document'));
     else {
-        song.songTitle = req.body.songTitle;
-        song.artistName = req.body.artistName;
-        song.videoLink = req.body.videoLink;
+        song._songTitle = req.body.songTitle;
+        song._artistName = req.body.artistName;
+        song._videoLink = req.body.videoLink;
 
         song.save().then(song => {
           res.json('Update complete');
